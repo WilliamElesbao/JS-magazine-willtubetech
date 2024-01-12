@@ -1,0 +1,168 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+
+  <body class="bg-stone-200 flex flex-col h-screen">
+    <header
+      class="flex text-xl bg-slate-950 px-8 py-2 justify-between sticky top-0 shadow-xl shadow-slate-400 z-10">
+        <a href="./">
+            <img
+                class="h-12"
+                src="assets/img/logo_maior.png"
+                alt="Logo do WillTube Tech" />
+        </a>
+    </header>
+    <form class="flex w-100 px-5 gap-4 py-10 grow">
+      <section id="data-user" class="w-1/3 bg-white rounded-lg py-5">
+        <p class="mb-5 text-center font-bold">Your Data</p>
+        <div class="flex flex-col px-10 py-3">
+          <label for="user-name" class="font-bold text-sm mb-2">Name</label>
+          <input
+            id="user-name"
+            type="text"
+            class="rounded-sm px-2 border border-slate-200 py-1"
+            placeholder="your name"
+            required />
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="user-email" class="font-bold text-sm mb-2">E-mail</label>
+          <input
+            id="user-email"
+            type="email"
+            class="rounded-sm px-2 border border-slate-200 py-1"
+            placeholder="youremail@email.com"
+            required />
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="user-contact-phone" class="font-bold text-sm mb-2"
+            >Contact Phone</label
+          >
+          <input
+            id="user-contact-phone"
+            type="tel"
+            class="rounded-sm px-2 border border-slate-200 py-1"
+            placeholder="+55 51998929854"
+            required />
+        </div>
+      </section>
+
+      <section id="payment-delivery" class="w-1/3 bg-white rounded-lg py-5">
+        <p class="mb-5 text-center font-bold">Payment & Delivery</p>
+        <div class="flex flex-col px-10 py-3">
+          <label for="card-number" class="font-bold text-sm mb-2"
+            >Card's Number</label
+          >
+          <input
+            id="card-number"
+            type="text"
+            class="rounded-sm px-2 border border-slate-200 py-1"
+            placeholder="1111 1111 1111 1111"
+            required />
+        </div>
+        <div class="flex">
+          <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="card-verif-value" class="font-bold text-sm mb-2"
+              >CVV</label
+            >
+            <input
+              id="card-verif-value"
+              type="text"
+              pattern="\d*"
+              maxlength="3"
+              class="rounded-sm px-2 border border-slate-200 py-1"
+              placeholder="222"
+              required />
+          </div>
+          <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="card-expiry" class="font-bold text-sm mb-2"
+              >Expiry</label
+            >
+            <input
+              id="card-expiry"
+              type="text"
+              class="rounded-sm px-2 border border-slate-200 py-1"
+              placeholder="10/24"
+              required />
+          </div>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="zip-code" class="font-bold text-sm mb-2">ZIP Code</label>
+          <input
+            id="zip-code"
+            type="text"
+            class="rounded-sm px-2 border border-slate-200 py-1"
+            placeholder="91030-380"
+            required />
+        </div>
+        <div class="flex flex-col px-10 py-3">
+          <label for="address" class="font-bold text-sm mb-2">Address</label>
+          <input
+            id="address"
+            type="text"
+            class="rounded-sm px-2 border border-slate-200 py-1"
+            placeholder="Rua tudo que sobe, desce"
+            required />
+        </div>
+        <div class="flex">
+          <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="address-number" class="font-bold text-sm mb-2"
+              >Number</label
+            >
+            <input
+              id="address-number"
+              type="text"
+              class="rounded-sm px-2 border border-slate-200 py-1"
+              placeholder="666"
+              required />
+          </div>
+          <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="address-unit" class="font-bold text-sm mb-2"
+              >Unit</label
+            >
+            <input
+              id="address-unit"
+              type="text"
+              class="rounded-sm px-2 border border-slate-200 py-1"
+              placeholder="69"
+              required />
+          </div>
+        </div>
+      </section>
+
+      <section id="product-checkout" class="w-1/3 bg-white rounded-lg py-5">
+        <section
+          id="container-products-checkout"
+          class="h-4/5 overflow-y-auto px-2"></section>
+        <section
+          id="cell-checkout"
+          class="flex flex-col px-2 h-1/5 justify-around">
+          <p
+            id="total-price"
+            class="bg-slate-200 text-green-800 rounded-lg pl-5">
+            Total $ 200
+          </p>
+          <button
+            class="bg-slate-900 text-slate-200 p-1 rounded-sm hover:bg-slate-800"
+            type="submit"
+            id="finish-order-checkout">
+            Finish Order
+          </button>
+        </section>
+      </section>
+    </form>
+    <script src="./checkout.js" type="module"></script>
+  </body>
+</html>
