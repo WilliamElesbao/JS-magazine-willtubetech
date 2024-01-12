@@ -14,7 +14,7 @@ export function catalogRender() {
             />
             <p class='text-sm'>${catalogProduct.brand}</p>
             <p class='text-sm'>${catalogProduct.name}</p>
-            <p class='text-sm'>$${catalogProduct.price}</p>
+            <p class='text-sm'>$ ${catalogProduct.price}</p>
             <button
                 id='add-${catalogProduct.id}'
                 class="bg-slate-950 text-slate-200 hover:bg-gradient-to-r from-sky-500 to-indigo-500"

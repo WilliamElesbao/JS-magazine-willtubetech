@@ -22,7 +22,7 @@ export const catalogProducts = [
     name: `Tech T-Shirt Gola V`,
     brand: `Insider`,
     price: 165,
-    productImg: `https://www.insiderstore.com.br/cdn/shop/files/PRETO-01_4.jpg?v=1699458216&width=1206`,
+    productImg: `https://www.insiderstore.com.br/cdn/shop/files/TechTShirtGolaVPreto2.jpg?v=1705086581&width=1200`,
     female: false,
   },
   {
@@ -139,11 +139,11 @@ export function renderProductOnCartSimple(
     ${product.name}
     </p>
     <p class="text-slate-400 text-xs">Size: L</p>
-    <p class="text-green-700 text-lg">$${product.price}</p>
+    <p class="text-green-700 text-lg">$ ${product.price.toFixed(2)}</p>
     </div>
     
     <div class='flex text-slate-950 items-end absolute bottom-0 right-2 text-lg'>
-      <p id='qnt${product.id}' class='ml-2'>${qntProduct}</p>
+      <p id='qnt${product.id}' class='ml-2'>Un: ${qntProduct}</p>
     </div>
     `;
   elementArticle.innerHTML = cardProductCart;

@@ -1,4 +1,5 @@
 import { renderProductOnCartSimple, getLocalStorage, destroyDatasFromLocalStorage, saveLocalStorage } from "./src/utilities";
+import { updatePriceCart } from './src/cartMenu';
 
 function renderProductsCheckout() {
   const idsProductCartQnt = getLocalStorage("cart") ?? {};
@@ -9,6 +10,7 @@ function renderProductsCheckout() {
       idsProductCartQnt[idProduct]
     );
   }
+  updatePriceCart();
 }
 
 function finishOrder(event) {

@@ -172,5 +172,5 @@ export function updatePriceCart() {
       catalogProducts.find((p) => p.id === idProductInCart).price *
       idsProductCartQnt[idProductInCart];
   }
-  priceCart.innerText = `Total: $${totalPriceCart}`;
+  priceCart.innerText = `Total: $ ${totalPriceCart.toFixed(2)}`;
 }
